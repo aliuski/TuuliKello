@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">TuuliKello</string>
+    <string name="action_settings">Asetukset</string>
+    <string name="observationsation">Mittausasemat</string>
+    <string name="forecast">Ennuste</string>
+    <string name="send">Lähetä</string>
+    <string name="stationtype_prompt">Mittausaseman tyyppi</string>
+    <string-array name="stationtype_arrays">
+        <item>Fmi</item>
+        <item>WindGuru</item>
+    </string-array>
+    <string name="forecast_info">Asema</string>
+    <string name="stationtype1_info">Asema 1</string>
+    <string name="stationtype2_info">Asema 2</string>
+    <string name="stationtype3_info">Asema 3</string>
+    <string name="stationtype4_info">Asema 4</string>
+    <string name="send_complete">Siirto älykelloon onnistui.</string>
+    <string name="pref_user_profile">Käyttäjän profiili</string>
+    <string name="pref_user_obserstation">Alasvetovalikkoon tulevat sää asemat</string>
+    <string name="pref_user_obserstationinfo">Käytössä olevat sääasemat löytyvät: http://ilmatieteenlaitos.fi/havaintoasemat</string>
+    <string name="pref_user_forecat">Ennute alasvetovalikkoon tulevat paikkakunnat</string>
+    <string name="pref_user_forecatstationinfo">Syötä sopivat paikkakunnat alekkain</string>
+    <string name="action_favorite">Valitse sääasema</string>
+    <string name="station_name">Aseman nimi</string>
+    <string name="fmisid_code">fmisid -koodi</string>
+    <string name="group_name">Ryhmän nimi</string>
+    <string name="forecast_name">Ennuste</string>
+    <string name="removebutton">Poista</string>
+    <string name="savebutton">Talleta</string>
+    <string name="newbutton">Uusi</string>
+    <string name="saved_observation_stations">Talletetut havaintoasemat</string>
+    <string name="station_password">Aseman salasana</string>
+
+</resources>
