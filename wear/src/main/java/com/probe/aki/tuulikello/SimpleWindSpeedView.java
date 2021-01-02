@@ -30,6 +30,7 @@ public class SimpleWindSpeedView extends View {
     private static final int STATIONSCOLOR[] = {Color.RED,Color.GREEN,Color.BLUE,Color.CYAN};
 
     private Paint paint;
+    private Paint paint_bold;
     private int sizex;
     private int sizey;
     private int sizeseparate;
@@ -42,12 +43,16 @@ public class SimpleWindSpeedView extends View {
         super(context);
         this.context = context;
         paint = new Paint();
+        paint_bold = new Paint();
+        paint_bold.setStrokeWidth(5F);
     }
 
     public SimpleWindSpeedView(Context context, AttributeSet set) {
         super(context, set);
         this.context = context;
         paint = new Paint();
+        paint_bold = new Paint();
+        paint_bold.setStrokeWidth(5F);
     }
 
     public void loadNewValues(String observations_str,String forecast_str){
@@ -138,20 +143,20 @@ public class SimpleWindSpeedView extends View {
         double time_length = (double)(end_point.getTime() - start_point.getTime()) / (double)sizeseparate;
         float xyw[] = new float[(destination.length - 1) * 4];
         int l2 = 0;
-        paint.setColor(color);
+        paint_bold.setColor(color);
         for (int loop = 0; loop < destination.length - 1; loop++) {
             xyw[l2++] = (int) (((double) (destination[loop].getTime() - start_point.getTime()) / time_length)) + MARGINALSIZE;
             xyw[l2++] = sizey - (int) ((double) (sizey - MARGINALSIZE) * wave[loop] / max);
             xyw[l2++] = (int) (((double) (destination[loop + 1].getTime() - start_point.getTime()) / time_length)) + MARGINALSIZE;
             xyw[l2++] = sizey - (int) ((double) (sizey - MARGINALSIZE) * wave[loop + 1] / max);
         }
-        canvas.drawLines(xyw, 0, xyw.length, paint);
+        canvas.drawLines(xyw, 0, xyw.length, paint_bold);
     }
 
     private void drewForecast(Canvas g, double wave[], double max){
-        paint.setColor(Color.WHITE);
+        paint_bold.setColor(Color.WHITE);
         g.drawLine((sizeseparate + MARGINALSIZE  ), (sizey - (int) ((double) (sizey - MARGINALSIZE) * wave[0] / max)),sizex + MARGINALSIZE,
-                (sizey - (int) ((double) (sizey - MARGINALSIZE) * wave[1] / max)),paint);
+                (sizey - (int) ((double) (sizey - MARGINALSIZE) * wave[1] / max)),paint_bold);
     }
 
     private void drewAngle(Canvas canvas, double winddirection, int tmpx, int tmpy){
